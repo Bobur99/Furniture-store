@@ -104,6 +104,7 @@ header .container {
   height: 0;
   overflow: hidden;
   transition: var(--tans);
+  z-index: 1000;
 }
 
 .navbar-collapse:before{
@@ -116,7 +117,7 @@ header .container {
   background: rgba(233, 156, 47, 0.95);
   border-radius: 0 0 50% 50%/ 0 0 100% 100%;
   transform: scalex(1.5);
-}
+  }
 /* ---------------------- js related class  */
 .show-navbar {
   height: 230px;
@@ -173,7 +174,8 @@ header .container {
   overflow-y: scroll;
   background: #fff;
   width: 100%;
-  height: 600px;
+  max-height: 600px;
+  min-height: 140px;
   top: 100%;
   left: 0;
   right: 0;
@@ -186,8 +188,12 @@ header .container {
 }
 
 .cart-container::-webkit-scrollbar-thumb {
-  background: rgba(0, 0, 0, 0.1);
+  background: rgba(0, 0, 0, 0.3);
   border-radius: 15px;
+}
+
+.cart-container::-webkit-scrollbar-track{
+  background: rgba(0, 0, 0, 0.05);
 }
 
 /* ---------------------- js related class  */
